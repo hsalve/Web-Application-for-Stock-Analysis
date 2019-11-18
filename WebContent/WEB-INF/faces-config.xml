@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+    version="2.2">
+	<managed-bean>
+		<managed-bean-name>dbInformationAccessBean</managed-bean-name>
+		<managed-bean-class>edu.uic.ids517.model.DbInformationAccessBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<property-name>username</property-name>
+			<property-class>java.lang.String</property-class>
+			<value>f17x321</value>
+		</managed-property>
+		<managed-property>
+			<property-name>dbSchema</property-name>
+			<property-class>java.lang.String</property-class>
+			<value>f17x321</value>
+		</managed-property>
+		<managed-property>
+			<property-name>dbmsHost</property-name>
+			<property-class>java.lang.String</property-class>
+			<value>131.193.209.69</value>
+		</managed-property>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>dbAccessBean</managed-bean-name>
+		<managed-bean-class>edu.uic.ids517.model.DbAccessBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	
+	<managed-bean>
+		<managed-bean-name>uploadFileBean</managed-bean-name>
+		<managed-bean-class>edu.uic.ids517.model.UploadFileBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<property-name>fileType</property-name>
+			<property-class>java.lang.String</property-class>
+			<value>c</value>
+		</managed-property>
+		<managed-property>
+			<property-name>headers</property-name>
+			<property-class>java.lang.String</property-class>
+			<value>n</value>
+		</managed-property>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>dbSchemaBean</managed-bean-name>
+		<managed-bean-class>edu.uic.ids517.model.DbSchemaBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>messageBean</managed-bean-name>
+		<managed-bean-class>edu.uic.ids517.model.MessageBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	
+		<managed-bean>
+		<managed-bean-name>statsManagedBean</managed-bean-name>
+		<managed-bean-class>edu.uic.ids517.model.StatsManagedBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<property-name>dbAccessBean</property-name>
+			<property-class>edu.uic.ids517.model.DbAccessBean</property-class>
+			<value>#{dbAccessBean}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>dbInformationAccessBean</property-name>
+			<property-class>edu.uic.ids517.model.DbInformationAccessBean</property-class>
+			<value>#{dbInformationAccessBean}</value>
+		</managed-property>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>mathManagedBean</managed-bean-name>
+		<managed-bean-class>edu.uic.ids517.model.MathManagedBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<property-name>dbAccessBean</property-name>
+			<property-class>edu.uic.ids517.model.DbAccessBean</property-class>
+			<value>#{dbAccessBean}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>dbInformationAccessBean</property-name>
+			<property-class>edu.uic.ids517.model.DbInformationAccessBean</property-class>
+			<value>#{dbInformationAccessBean}</value>
+		</managed-property>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>statsBean</managed-bean-name>
+		<managed-bean-class>edu.uic.ids517.model.StatsBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<property-name>dbAccessBean</property-name>
+			<property-class>edu.uic.ids517.model.DbAccessBean</property-class>
+			<value>#{dbAccessBean}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>statsManagedBean</property-name>
+			<property-class>edu.uic.ids517.model.StatsManagedBean</property-class>
+			<value>#{statsManagedBean}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>mathManagedBean</property-name>
+			<property-class>edu.uic.ids517.model.MathManagedBean</property-class>
+			<value>#{mathManagedBean}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>dbInformationAccessBean</property-name>
+			<property-class>edu.uic.ids517.model.DbInformationAccessBean</property-class>
+			<value>#{dbInformationAccessBean}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>export</property-name>
+			<property-class>edu.uic.ids517.model.Export</property-class>
+			<value>#{export}</value>
+		</managed-property>
+		
+	</managed-bean>
+
+	
+
+	<managed-bean>
+		<managed-bean-name>reports</managed-bean-name>
+		<managed-bean-class>edu.uic.ids517.model.Reports</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<property-name>dbAccessBean</property-name>
+			<property-class>edu.uic.ids517.model.DbAccess</property-class>
+			<value>#{dbAccessBean}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>statsManagedBean</property-name>
+			<property-class>edu.uic.ids.model.StatsManagedBean</property-class>
+			<value>#{statsManagedBean}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>dbInformationAccessBean</property-name>
+			<property-class>edu.uic.ids.model.DbInformationAccessBean</property-class>
+			<value>#{dbInformationAccessBean}</value>
+		</managed-property>
+	</managed-bean>
+	
+		
+<!-- Database Login Navigation Rule-->
+	<navigation-rule>
+		<display-name>databaseLogin</display-name>
+		<from-view-id>/databaseLogin.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>true</from-outcome>
+			<to-view-id>/Main.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>false</from-outcome>
+			<to-view-id>/databaseLogin.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+</faces-config>
